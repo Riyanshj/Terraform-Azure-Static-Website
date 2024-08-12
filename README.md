@@ -28,7 +28,7 @@ mkdir terraform-azure-static-website
 cd terraform-azure-static-website
 ```
 
-Create a `main.tf` file for your Terraform configuration:
+Create a `provider.tf` and `variable.tf` file for your Terraform configuration:
 
 ```bash
 touch main.tf
@@ -55,7 +55,7 @@ provider "azurerm" {
 
 ### 3. Create an Azure Storage Account
 
-Add the following code to `provider.tf` or `main.tf` to create an Azure Storage account:
+Add the following code to `provider.tf` or `variable.tf` to create an Azure Storage account:
 
 ```hcl
 resource "azurerm_resource_group" "rg" {
