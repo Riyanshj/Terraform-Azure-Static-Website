@@ -36,28 +36,26 @@ touch main.tf
 
 ### 2. Configure Terraform Provider
 
-In `main.tf`, configure the Azure provider:
+In `provider.tf`, configure the Azure provider:
 
 ```hcl
-provider "azurerm" {
-  features = {}
-}
-
 terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~> 3.0"
+      version = "3.115.0"
     }
   }
+}
 
-  required_version = ">= 1.0.0"
+provider "azurerm" {
+  features {}  # Required but empty
 }
 ```
 
 ### 3. Create an Azure Storage Account
 
-Add the following code to `main.tf` to create an Azure Storage account:
+Add the following code to `provider.tf` or `main.tf` to create an Azure Storage account:
 
 ```hcl
 resource "azurerm_resource_group" "rg" {
