@@ -31,7 +31,8 @@ cd terraform-azure-static-website
 Create a `provider.tf` and `variable.tf` file for your Terraform configuration:
 
 ```bash
-touch main.tf
+touch provider.tf
+touch variable.tf
 ```
 
 ### 2. Configure Terraform Provider
